@@ -9,12 +9,18 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    @IBOutlet weak var heightSlider: UISlider!
+    @IBOutlet weak var heightLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
-
+    
+    @IBAction func sliderDragged(_ sender: UISlider) {
+        let roundedHeight = round(sender.value * 10) / 10
+        heightLabel.text = "\(roundedHeight)m"
+    }
+    
 }
 
