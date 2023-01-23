@@ -25,7 +25,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func weightSliderActionHandler(_ sender: UISlider) {
-        let roundedWeight = round(sender.value * 10) / 10
+        let roundedWeight = Int(sender.value)
         weightLabel.text = "\(roundedWeight)Kg"
     }
     
